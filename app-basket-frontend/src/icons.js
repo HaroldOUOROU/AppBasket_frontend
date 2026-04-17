@@ -1,0 +1,22 @@
+//fichier pour les icones
+export {default as DarkIcon} from "@mui/icons-material/DarkMode";
+export {default as LightIcon} from "@mui/icons-material/LightMode";
+export {default as GroupIcon} from "@mui/icons-material/Groups";
+export {default as ShareIcone} from "@mui/icons-material/Share";
+export {default as MailIcon} from "@mui/icons-material/Mail";
+export {default as LanguageIcone} from "@mui/icons-material/Language";
+export {default as StarsIcon} from "@mui/icons-material/Stars";
+export {default as NewsIcon} from "@mui/icons-material/Newspaper";
+export {default as SearchIcon} from "@mui/icons-material/Search";
+export {default as CampIcon} from "@mui/icons-material/Campaign";
+export {default as FilterIcon} from "@mui/icons-material/FilterList";
+export {default as LocateIcon} from "@mui/icons-material/LocationOn";
+export {default as CategoryIcon} from "@mui/icons-material/Category";
+export {default as SportBasketIcon} from "@mui/icons-material/SportsBasketball";
+export {default as InfoIcon} from "@mui/icons-material/Info";
+export{default as ArrowIcon} from "@mui/icons-material/ArrowBack";
+export {default as ArrowBackIcon} from "@mui/icons-material/ArrowForward";
+export {default as RefreshIcon} from "@mui/icons-material/Refresh";
+export {default as FacebookIcon} from "@mui/icons-material/Facebook";
+export {default as TwitterIcon} from "@mui/icons-material/Twitter";
+export {default as InstagramIcon} from "@mui/icons-material/Instagram";

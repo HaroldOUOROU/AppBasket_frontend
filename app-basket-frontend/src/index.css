@@ -1,2 +1,44 @@
-/* Tailwind CSS supprimé */
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Fonds */
+  --color-bg-light: #f9fafb;
+  --color-bg-dark: #0f172a;
+
+  /* Cartes */
+  --color-card-light: #ffffff;
+  --color-card-dark: #1e293b;
+
+  /* Couleurs principales */
+  --color-blue-text: #1e3a5f;
+  --color-orange-basket: #f28c28;
+
+  /* Textes */
+  --color-text-primary-light: #1e3a5f;
+  --color-text-primary-dark: #e5e7eb;
+  --color-text-secondary-light: #6b7280;
+  --color-text-secondary-dark: #94a3b8;
+
+  /* Bordures */
+  --color-border-light: #e5e7eb;
+  --color-border-dark: #1e293b;
+
+  /* Benin */
+  --color-bg-benin-green: #008751;
+  --color-bg-benin-yellow: #fcd116;
+  --color-bg-benin-red: #e8112d;
+
+  /* Typographie */
+  --font-display: "Lexend", sans-serif;
+}
+
+/* Styles de base appliqués sur toute la page */
+/* html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+} */
+body {
+  @apply min-h-screen bg-bg-light dark:bg-bg-dark antialiased;
+}
