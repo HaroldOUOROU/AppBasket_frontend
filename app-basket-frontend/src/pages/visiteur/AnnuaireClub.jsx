@@ -148,6 +148,20 @@ export default function AnnuaireClub() {
                     >
                       {type}
                     </label>
+
+                    {/* Icône infos avec bulle */}
+                    <div className="relative group inline-flex items-center">
+                      <InfoIcon className="w-3 h-3 text-gray-400 cursor-pointer" />
+                      <div
+                        className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2 rounded-lg bg-gray-900 text-white text-xs
+              opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50"
+                      >
+                        {type === "Académie"
+                          ? "Club axé sur la formation et l'accompagnement des jeunes joueurs dans leur développement sportif et personnel."
+                          : "Club participant au championnat national organisé par la Fédération de BasketBall Béninoise (FBBB)."}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -238,23 +252,27 @@ export default function AnnuaireClub() {
             ))}
           </div>
 
-            <div className="flex items-center justify-center gap-2 mt-8">
-              <button className="w-8 h-8 rounded-lg border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all">
-                <ArrowIcon/>
+          <div className="flex items-center justify-center gap-2 mt-8">
+            <button className="w-8 h-8 rounded-lg border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all">
+              <ArrowIcon />
+            </button>
+            {[1, 2].map((page) => (
+              <button
+                key={page}
+                className={`w-8 h-8 rounded-lg text-sm font-medium transition-all
+                  ${
+                    page === 1
+                      ? "bg-orange-basket text-white"
+                      : "border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket"
+                  }`}
+              >
+                {page}
               </button>
-              {[1, 2].map((page)=>(
-                <button key={page}  className={`w-8 h-8 rounded-lg text-sm font-medium transition-all
-                  ${page === 1
-                    ? "bg-orange-basket text-white"
-                    : "border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket"
-                  }`} >
-                    {page}
-                  </button>
-                  
-              ))}
-              <button className="w-8 h-8 rounded-lg border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all"><ArrowBackIcon/></button>
-            </div>
-
+            ))}
+            <button className="w-8 h-8 rounded-lg border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all">
+              <ArrowBackIcon />
+            </button>
+          </div>
         </main>
       </div>
 

@@ -4,6 +4,12 @@ import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+// import swipper
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/autoplay";
+// import { Autoplay } from "swiper/modules";
+
 export default function Accueil() {
   const [sectionClubs, setSectionClubs] = useState([
     {
@@ -40,6 +46,34 @@ export default function Accueil() {
           className="relative rounded-2xl overflow-hidden mx-4 mt-4"
           style={{ backgroundImage: `url("/images/Modern court.jpg")` }}
         >
+          {/* <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="absolute inset-0 w-full h-full"
+          >
+            <SwiperSlide>
+              <div
+                className="w-full h-full min-h-[520px] bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/photos/att.jpeg')",
+                }}
+              />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div
+                className="w-full h-full min-h-[520px] bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/photos/lancer.jpeg')",
+                }}
+              />
+            </SwiperSlide>
+          </Swiper> */}
+
           <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 flex flex-col items-center justify-center min-h-125 px-6 text-center">
@@ -130,13 +164,14 @@ export default function Accueil() {
             </div>
 
             <div className="flex justify-center mt-8">
-              <Link to="/clubs" className="px-6 py-2 rounded-xl border border-border-light dark:border-border-dark text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all">
+              <Link
+                to="/clubs"
+                className="px-6 py-2 rounded-xl border border-border-light dark:border-border-dark text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark hover:border-orange-basket hover:text-orange-basket transition-all"
+              >
                 Charger plus de clubs
               </Link>
             </div>
           </div>
-
-
 
           {/* Colonne de droite pour les actuaités */}
 
@@ -215,7 +250,7 @@ export default function Accueil() {
                 Recevez les alertes résultats et actualités des clubs chaque
                 semaine.
               </p>
-              {/* <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
                 <input
                   type="email"
                   placeholder="Votre email"
@@ -224,7 +259,64 @@ export default function Accueil() {
                 <button className="p-2 rounded-lg bg-orange-basket text-white hover:opacity-90 transition-opacity">
                   →
                 </button>
-              </div> */}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* SECTION : Vous gérez un club ? */}
+        <section className="max-w-6xl mx-auto px-4 pb-14">
+          <div className="relative overflow-hidden rounded-3xl bg-blue-text px-8 py-10">
+            {/* Effets décoratifs */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/5" />
+            <div className="absolute -bottom-16 left-10 w-52 h-52 rounded-full bg-orange-basket/10" />
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              {/* Texte */}
+              <div className="max-w-2xl">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-orange-200 font-bold">
+                  Clubs & Organisations
+                </span>
+
+                <h2 className="text-3xl md:text-4xl font-black text-white mt-3 leading-tight">
+                  Vous gérez un club ?
+                </h2>
+
+                <p className="text-sm md:text-base text-blue-100 mt-4 leading-relaxed max-w-xl">
+                  Rejoignez la plateforme BasketScoop pour présenter votre club,
+                  publier vos actualités, mettre en avant vos équipes et
+                  développer votre visibilité auprès de la communauté basketball
+                  au Bénin.
+                </p>
+
+                {/* Points */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                  {[
+                    "Présentation officielle du club",
+                    "Publication des actualités",
+                    "Mise en avant des équipes",
+                    "Visibilité auprès des supporters",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-center gap-2 text-sm text-white"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-orange-basket shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Boutons */}
+              <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+                <button className="px-7 py-3 rounded-xl bg-orange-basket text-white font-semibold shadow-lg hover:scale-[1.02] transition-all">
+                  Inscrire mon club
+                </button>
+
+                <button className="px-7 py-3 rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 transition-all">
+                  En savoir plus
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -234,7 +326,3 @@ export default function Accueil() {
     </div>
   );
 }
-
-
-
-

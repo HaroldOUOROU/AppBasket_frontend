@@ -40,7 +40,7 @@ export default function NavBar() {
           {/* Actions */}
           <div className="flex items-center gap-4">
             {/* Bouton connexion */}
-            <button className="px-4 py-1.5 rounded-lg bg-orange-basket text-white text-sm font-medium hover:opacity-90 transition-opacity">
+            <button className="px-4 py-1.5 rounded-lg bg-gradient-to-r from-blue-text to-orange-basket text-white text-sm font-medium hover:opacity-90 transition-opacity">
               Se connecter
             </button>
 
